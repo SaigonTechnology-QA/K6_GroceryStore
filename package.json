@@ -1,0 +1,22 @@
+{
+  "name": "k6_codeceptjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "k6 run ./grocery_store/get_status/get_status.js",
+    "full": "k6 run ./grocery_store/get_all_orders/get_all_orders.js",
+    "batch": "k6 cloud ./grocery_store/get_product/get_product.js",
+    "csv": "k6 run --out csv=test_results.csv ./grocery_store/first_script.js",
+    "cloud": "k6 cloud ./grocery_store/first_script.js",
+    "cloud_report": "k6 run --out cloud ./grocery_store/first_script.js",
+    "auth": "k6 run ./grocery_store/authentication.js",
+    "demo": "k6 run ./grocery_store/demo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/k6": "^0.44.1"
+  }
+}
